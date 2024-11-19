@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CDA0EB"
+    tools:context=".Fragment4">
+
+    <!-- Header Section -->
+    <!-- Ảnh đại diện (Profile Image) -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="112dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/elm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Tên người dùng (Username Text) -->
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="166dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="nhatduy3103"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImage" />
+
+    <!-- Thẻ trạng thái (Status Tag) -->
+    <TextView
+        android:id="@+id/statusTag"
+        android:layout_width="87dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Thành viên"
+        android:textColor="#04052A"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usernameText" />
+
+    <!-- Thông báo bảo mật (Security Notification) -->
+    <TextView
+        android:id="@+id/securityNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:background="#8C39DE"
+        android:padding="10dp"
+        android:text="Vui lòng thiết lập mật khẩu của bạn để bảo mật tài khoản."
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusTag" />
+
+    <!-- Order Section -->
+    <LinearLayout
+        android:id="@+id/orderSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CDA0EB"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/securityNotification">
+
+        <!-- First Item (Pending Confirmation) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/pendingConfirmationIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/website"
+                android:contentDescription="Pending Confirmation" />
+
+            <TextView
+                android:id="@+id/pendingConfirmation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#0D0905"
+                android:text="Chờ xác nhận"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Second Item (Pending Pickup) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/pendingPickupIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Pending Pickup"
+                android:src="@drawable/box" />
+
+            <TextView
+                android:id="@+id/pendingPickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#0D0905"
+                android:text="Chờ lấy hàng"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Third Item (Pending Delivery) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/pendingDeliveryIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Pending Delivery"
+                android:src="@drawable/delivery" />
+
+            <TextView
+                android:id="@+id/pendingDelivery"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#0D0905"
+                android:text="Chờ giao hàng"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Fourth Item (Review) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/reviewIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Review"
+                android:src="@drawable/favorite" />
+
+            <TextView
+                android:id="@+id/review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#0D0905"
+                android:text="Đánh giá"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Edit Profile and Logout Section -->
+
+    <!-- Footer Section (Settings and Message) -->
+
+    <LinearLayout
+        android:id="@+id/buttonSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderSection">
+
+        <Button
+            android:id="@+id/editProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6FAEDB"
+            android:text="Chỉnh Sửa Thông Tin"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#ED5C33"
+            android:text="Đăng Xuất"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/buttonSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="59dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Settings"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profileImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/messageButton"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="28dp"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Message"
+        android:padding="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/settingsButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

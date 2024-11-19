@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- RecyclerView để hiển thị các mặt hàng trong giỏ -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/buttonCheckout"
+        android:layout_alignParentTop="true" />
+
+    <!-- Nút thanh toán -->
+    <Button
+        android:id="@+id/buttonCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thanh Toán"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#652CB4"
+        android:textStyle="bold"
+        android:textColor="#FFEB3B" />
+
+</RelativeLayout>
